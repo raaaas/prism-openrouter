@@ -11,7 +11,6 @@ use Prism\Prism\ValueObjects\ToolCall;
 class AssistantMessage implements Message
 {
     use HasProviderMeta;
-
     /**
      * @param  ToolCall[]  $toolCalls
      * @param  array<string,mixed>  $additionalContent
@@ -21,4 +20,14 @@ class AssistantMessage implements Message
         public readonly array $toolCalls = [],
         public readonly array $additionalContent = []
     ) {}
+
+    public function role(): string
+    {
+        return 'assistant';
+    }
+
+    public function content(): string
+    {
+        return $this->content;
+    }
 }

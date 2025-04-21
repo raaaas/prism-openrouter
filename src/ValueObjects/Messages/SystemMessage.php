@@ -10,8 +10,17 @@ use Prism\Prism\Contracts\Message;
 class SystemMessage implements Message
 {
     use HasProviderMeta;
-
     public function __construct(
         public readonly string $content
     ) {}
+
+    public function role(): string
+    {
+        return 'system';
+    }
+
+    public function content(): string
+    {
+        return $this->content;
+    }
 }

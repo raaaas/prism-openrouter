@@ -14,7 +14,6 @@ use Prism\Prism\ValueObjects\Messages\Support\Text;
 class UserMessage implements Message
 {
     use HasProviderMeta;
-
     /**
      * @param  array<int, Text|Image|Document|OpenAIFile>  $additionalContent
      */
@@ -23,6 +22,16 @@ class UserMessage implements Message
         public array $additionalContent = []
     ) {
         $this->additionalContent[] = new Text($content);
+    }
+
+    public function role(): string
+    {
+        return 'user';
+    }
+
+    public function content(): string
+    {
+        return $this->content;
     }
 
     public function text(): string
