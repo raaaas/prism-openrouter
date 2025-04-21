@@ -1,5 +1,5 @@
 {
-  "name": "prism-php/prism",
+  "name": "raaaas/prism-openrouter",
   "description": "A powerful Laravel package for integrating Large Language Models (LLMs) into your applications.",
   "type": "library",
   "license": "MIT",
@@ -12,6 +12,12 @@
     {
       "name": "TJ Miller",
       "email": "hello@echolabs.dev"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/raaaas/prism-openrouter"
     }
   ],
   "require": {
